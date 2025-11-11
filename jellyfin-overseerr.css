@@ -72,13 +72,18 @@
 /* ============================================================
    GLOBAL STYLES
    ============================================================ */
-* {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-}
-
 body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   background: var(--jf-bg) !important;
   color: var(--jf-text-primary) !important;
+}
+
+/* Apply Inter font to text elements, but preserve icon fonts */
+h1, h2, h3, h4, h5, h6, p, span:not([class*="material-icons"]):not([class*="md-icon"]), 
+div:not([class*="material-icons"]):not([class*="md-icon"]), 
+button:not([class*="material-icons"]):not([class*="md-icon"]), 
+a, label, input, textarea, select {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 /* ============================================================
