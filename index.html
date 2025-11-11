@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jellyfin Overseerr Theme - Preview</title>
+    
+    <!-- TailwindCSS CDN for layout utilities -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="jellyfin-overseerr.css">
+    
+    <style>
+        /* Additional preview-specific styles */
+        body {
+            background: var(--jf-bg);
+            color: var(--jf-text-primary);
+            font-family: 'Inter', sans-serif;
+            padding: 2rem;
+        }
+        
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .preview-section {
+            margin-bottom: 3rem;
+        }
+        
+        .preview-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--jf-text-primary);
+        }
+        
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <img src="assets/logo.svg" alt="Logo" class="headerLogo mx-auto mb-4" style="height: 64px;">
+            <h1 class="text-4xl font-bold mb-2">Jellyfin Overseerr Theme</h1>
+            <p class="text-xl" style="color: var(--jf-text-secondary);">
+                Local Preview - Test the theme before deploying
+            </p>
+        </header>
+
+        <!-- Instructions -->
+        <div class="preview-section">
+            <div class="cardBox p-6" style="background: var(--jf-surface); border-radius: var(--jf-radius);">
+                <h2 class="preview-title">📋 How to Test</h2>
+                <ul style="color: var(--jf-text-secondary); line-height: 1.8;">
+                    <li>✅ Open this file in your browser</li>
+                    <li>✅ Check button styles and hover effects</li>
+                    <li>✅ Verify card components and spacing</li>
+                    <li>✅ Test responsive design (resize window)</li>
+                    <li>✅ Inspect colors and gradients</li>
+                    <li>✅ Once satisfied, deploy to GitHub and import into Jellyfin</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Buttons Section -->
+        <div class="preview-section">
+            <h2 class="preview-title">🔘 Buttons</h2>
+            <div class="flex flex-wrap gap-4">
+                <button class="button btnPrimary">Primary Button</button>
+                <button class="button">Secondary Button</button>
+                <button class="emby-button emby-button-submit">Submit Button</button>
+                <button class="button" disabled>Disabled Button</button>
+            </div>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="preview-section">
+            <h2 class="preview-title">🎴 Cards</h2>
+            <div class="component-grid">
+                <div class="cardBox">
+                    <img src="https://via.placeholder.com/300x450/5b5ee1/ffffff?text=Movie+Poster" 
+                         alt="Movie" 
+                         style="width: 100%; border-radius: var(--jf-radius); margin-bottom: 1rem;">
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Movie Title</h3>
+                    <p style="color: var(--jf-text-secondary); font-size: 0.875rem;">
+                        2024 • Action • 2h 15m
+                    </p>
+                </div>
+                
+                <div class="cardBox">
+                    <img src="https://via.placeholder.com/300x450/8b5cf6/ffffff?text=TV+Show" 
+                         alt="TV Show" 
+                         style="width: 100%; border-radius: var(--jf-radius); margin-bottom: 1rem;">
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem;">TV Show Title</h3>
+                    <p style="color: var(--jf-text-secondary); font-size: 0.875rem;">
+                        2024 • Drama • 3 Seasons
+                    </p>
+                </div>
+                
+                <div class="cardBox">
+                    <img src="https://via.placeholder.com/300x450/6366f1/ffffff?text=Album+Art" 
+                         alt="Album" 
+                         style="width: 100%; border-radius: var(--jf-radius); margin-bottom: 1rem;">
+                    <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Album Title</h3>
+                    <p style="color: var(--jf-text-secondary); font-size: 0.875rem;">
+                        Artist Name • 2024 • 12 tracks
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Elements Section -->
+        <div class="preview-section">
+            <h2 class="preview-title">📝 Form Elements</h2>
+            <div class="cardBox p-6" style="background: var(--jf-surface); border-radius: var(--jf-radius);">
+                <div class="space-y-4">
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">
+                            Text Input
+                        </label>
+                        <input type="text" 
+                               placeholder="Enter text..." 
+                               style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--jf-surface-hover); background: var(--jf-bg); color: var(--jf-text-primary);">
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">
+                            Select Dropdown
+                        </label>
+                        <select style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--jf-surface-hover); background: var(--jf-bg); color: var(--jf-text-primary);">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">
+                            Textarea
+                        </label>
+                        <textarea rows="4" 
+                                  placeholder="Enter description..." 
+                                  style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--jf-surface-hover); background: var(--jf-bg); color: var(--jf-text-primary); resize: vertical;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Palette Section -->
+        <div class="preview-section">
+            <h2 class="preview-title">🎨 Color Palette</h2>
+            <div class="component-grid">
+                <div class="cardBox p-6 text-center">
+                    <div style="width: 100%; height: 100px; background: var(--jf-accent); border-radius: var(--jf-radius); margin-bottom: 1rem;"></div>
+                    <p style="font-weight: 600;">Accent</p>
+                    <code style="font-size: 0.75rem; color: var(--jf-text-secondary);">#5b5ee1</code>
+                </div>
+                
+                <div class="cardBox p-6 text-center">
+                    <div style="width: 100%; height: 100px; background: var(--jf-accent-gradient); border-radius: var(--jf-radius); margin-bottom: 1rem;"></div>
+                    <p style="font-weight: 600;">Gradient</p>
+                    <code style="font-size: 0.75rem; color: var(--jf-text-secondary);">Purple-Blue</code>
+                </div>
+                
+                <div class="cardBox p-6 text-center">
+                    <div style="width: 100%; height: 100px; background: var(--jf-bg); border-radius: var(--jf-radius); margin-bottom: 1rem; border: 1px solid var(--jf-surface);"></div>
+                    <p style="font-weight: 600;">Background</p>
+                    <code style="font-size: 0.75rem; color: var(--jf-text-secondary);">#0f111a</code>
+                </div>
+                
+                <div class="cardBox p-6 text-center">
+                    <div style="width: 100%; height: 100px; background: var(--jf-surface); border-radius: var(--jf-radius); margin-bottom: 1rem;"></div>
+                    <p style="font-weight: 600;">Surface</p>
+                    <code style="font-size: 0.75rem; color: var(--jf-text-secondary);">#181a25</code>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gradient Showcase -->
+        <div class="preview-section">
+            <h2 class="preview-title">✨ Gradient Effects</h2>
+            <div class="cardBox p-12 text-center" style="background: var(--jf-accent-gradient); border-radius: var(--jf-radius);">
+                <h3 class="text-3xl font-bold mb-2">Overseerr-Inspired Gradient</h3>
+                <p style="opacity: 0.9;">Smooth purple-blue gradient for modern UI elements</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 pt-8" style="border-top: 1px solid var(--jf-surface); color: var(--jf-text-secondary);">
+            <p class="mb-2">🎬 Jellyfin Overseerr Theme</p>
+            <p style="font-size: 0.875rem;">
+                Created by Coral Code • Inspired by Overseerr
+            </p>
+            <p style="font-size: 0.875rem; margin-top: 1rem;">
+                Ready to deploy? Push to GitHub and add the @import line to Jellyfin!
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Add interactive hover effects demonstration
+        console.log('🎨 Jellyfin Overseerr Theme Preview Loaded');
+        console.log('📝 Check the styling of buttons, cards, and form elements');
+        console.log('🚀 Once satisfied, deploy to GitHub and import into Jellyfin');
+    </script>
+</body>
+</html>

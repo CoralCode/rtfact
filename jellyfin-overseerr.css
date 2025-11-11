@@ -1,0 +1,625 @@
+/* ============================================================
+   RTFact Jellyfin Theme
+   Version: 1.0
+   Author: RTFact
+   Description: Modern elegant theme inspired by Overseerr and ElegantFin
+   Repository: https://github.com/RTFact/jellyfin-overseerr-theme
+   
+   Installation:
+   @import url("https://cdn.jsdelivr.net/gh/RTFact/jellyfin-overseerr-theme@main/jellyfin-overseerr.css");
+   
+   Jellyfin 10.11.x: Dashboard → Branding → Custom CSS
+   Jellyfin 10.10.x and earlier: Dashboard → General → Custom CSS
+   
+   Tested on: Jellyfin 10.11.2
+   
+   Official Jellyfin CSS Documentation:
+   https://jellyfin.org/docs/general/clients/css-customization/
+   
+   Note: Use !important to override Jellyfin's inline styles
+   ============================================================ */
+
+/* ============================================================
+   FONTS
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ============================================================
+   CSS VARIABLES
+   ============================================================ */
+:root {
+  /* Primary Colors */
+  --jf-accent: #5b5ee1;
+  --jf-accent-hover: #4a4dc9;
+  --jf-accent-gradient: linear-gradient(135deg, #5b5ee1, #8b5cf6);
+  
+  /* Background Colors */
+  --jf-bg: #0f111a;
+  --jf-bg-secondary: #13151f;
+  --jf-surface: #181a25;
+  --jf-surface-hover: #202330;
+  --jf-surface-elevated: #252836;
+  
+  /* Text Colors */
+  --jf-text-primary: #e5e7eb;
+  --jf-text-secondary: #9ca3af;
+  --jf-text-tertiary: #6b7280;
+  --jf-text-muted: #4b5563;
+  
+  /* Border & Divider */
+  --jf-border: #252836;
+  --jf-divider: rgba(255, 255, 255, 0.08);
+  
+  /* Status Colors */
+  --jf-success: #10b981;
+  --jf-warning: #f59e0b;
+  --jf-error: #ef4444;
+  --jf-info: #3b82f6;
+  
+  /* Spacing & Layout */
+  --jf-radius: 12px;
+  --jf-radius-sm: 8px;
+  --jf-radius-lg: 16px;
+  --jf-transition: 0.25s ease-in-out;
+  
+  /* Shadows */
+  --jf-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --jf-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --jf-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --jf-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================================
+   GLOBAL STYLES
+   ============================================================ */
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+body {
+  background: var(--jf-bg) !important;
+  color: var(--jf-text-primary) !important;
+}
+
+/* ============================================================
+   MAIN LAYOUT
+   ============================================================ */
+.layout-desktop,
+.layout-mobile,
+.layout-tv {
+  background: var(--jf-bg) !important;
+}
+
+.mainDrawer-scrollContainer,
+.mainAnimatedPages {
+  background: var(--jf-bg) !important;
+}
+
+/* Page Container */
+.pageTitleContainer,
+.pageTitle {
+  background: transparent !important;
+  color: var(--jf-text-primary) !important;
+}
+
+/* Content Sections */
+.section,
+.verticalSection {
+  background: transparent !important;
+}
+
+/* ============================================================
+   HEADER & NAVIGATION
+   ============================================================ */
+.skinHeader,
+.headerTop {
+  background: var(--jf-surface) !important;
+  border-bottom: 1px solid var(--jf-border) !important;
+  backdrop-filter: blur(10px);
+}
+
+.headerTabs {
+  background: transparent !important;
+}
+
+.headerTabs .emby-button {
+  color: var(--jf-text-secondary) !important;
+  border-radius: var(--jf-radius-sm) !important;
+  transition: all var(--jf-transition) !important;
+}
+
+.headerTabs .emby-button:hover {
+  color: var(--jf-text-primary) !important;
+  background: var(--jf-surface-hover) !important;
+}
+
+.headerTabs .emby-button.emby-tab-button-active {
+  color: var(--jf-accent) !important;
+  background: var(--jf-surface-hover) !important;
+  font-weight: 600 !important;
+}
+
+/* Header Logo */
+.headerLogo {
+  content: url('https://cdn.jsdelivr.net/gh/RTFact/jellyfin-overseerr-theme@main/assets/logo.svg') !important;
+  height: 42px !important;
+  width: auto !important;
+  transition: transform var(--jf-transition) !important;
+}
+
+.headerLogo:hover {
+  transform: scale(1.05) !important;
+}
+
+/* ============================================================
+   SIDEBAR & DRAWER
+   ============================================================ */
+.mainDrawer,
+.navDrawer {
+  background: var(--jf-surface) !important;
+  border-right: 1px solid var(--jf-border) !important;
+}
+
+.navMenuOption {
+  color: var(--jf-text-secondary) !important;
+  border-radius: var(--jf-radius-sm) !important;
+  margin: 4px 8px !important;
+  transition: all var(--jf-transition) !important;
+}
+
+.navMenuOption:hover {
+  background: var(--jf-surface-hover) !important;
+  color: var(--jf-text-primary) !important;
+}
+
+.navMenuOption.navMenuOption-selected {
+  background: var(--jf-accent-gradient) !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.button,
+.emby-button,
+.paper-icon-button-light {
+  border-radius: var(--jf-radius-sm) !important;
+  transition: all var(--jf-transition) !important;
+  font-weight: 500 !important;
+}
+
+/* Primary Buttons */
+.button-submit,
+.btnPrimary,
+.emby-button-submit,
+.raised {
+  background: var(--jf-accent-gradient) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: var(--jf-shadow) !important;
+}
+
+.button-submit:hover,
+.btnPrimary:hover,
+.emby-button-submit:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--jf-shadow-lg) !important;
+  filter: brightness(1.1) !important;
+}
+
+/* Secondary Buttons */
+.button,
+.emby-button {
+  background: var(--jf-surface) !important;
+  color: var(--jf-text-primary) !important;
+  border: 1px solid var(--jf-border) !important;
+}
+
+.button:hover,
+.emby-button:hover {
+  background: var(--jf-surface-hover) !important;
+  border-color: var(--jf-accent) !important;
+}
+
+/* Disabled Buttons */
+.button:disabled,
+.emby-button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Icon Buttons */
+.paper-icon-button-light {
+  color: var(--jf-text-secondary) !important;
+}
+
+.paper-icon-button-light:hover {
+  color: var(--jf-accent) !important;
+  background: var(--jf-surface-hover) !important;
+}
+
+/* ============================================================
+   CARDS & MEDIA ITEMS
+   ============================================================ */
+.card,
+.cardBox,
+.itemsContainer {
+  background: transparent !important;
+}
+
+.cardContent,
+.cardImageContainer {
+  border-radius: var(--jf-radius) !important;
+  overflow: hidden !important;
+  transition: all var(--jf-transition) !important;
+}
+
+.cardContent:hover,
+.cardImageContainer:hover {
+  transform: scale(1.05) !important;
+  box-shadow: var(--jf-shadow-xl) !important;
+}
+
+.cardContent-button {
+  background: var(--jf-surface) !important;
+  border-radius: var(--jf-radius) !important;
+  border: 1px solid var(--jf-border) !important;
+}
+
+.cardContent-button:hover {
+  background: var(--jf-surface-hover) !important;
+  border-color: var(--jf-accent) !important;
+}
+
+/* Card Text */
+.cardText,
+.cardTextCentered {
+  color: var(--jf-text-primary) !important;
+  font-weight: 600 !important;
+}
+
+.cardText-secondary {
+  color: var(--jf-text-secondary) !important;
+}
+
+/* Card Overlays */
+.cardOverlayButton,
+.cardOverlayContainer {
+  background: linear-gradient(to top, rgba(15, 17, 26, 0.95), transparent) !important;
+  border-radius: var(--jf-radius) !important;
+}
+
+/* ============================================================
+   FORMS & INPUTS
+   ============================================================ */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+textarea,
+select {
+  background: var(--jf-surface) !important;
+  color: var(--jf-text-primary) !important;
+  border: 1px solid var(--jf-border) !important;
+  border-radius: var(--jf-radius-sm) !important;
+  padding: 12px 16px !important;
+  transition: all var(--jf-transition) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--jf-accent) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(91, 94, 225, 0.1) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--jf-text-tertiary) !important;
+}
+
+/* Checkboxes & Radio Buttons */
+.emby-checkbox:checked + span::before,
+.emby-radio:checked + span::before {
+  background: var(--jf-accent-gradient) !important;
+  border-color: var(--jf-accent) !important;
+}
+
+/* ============================================================
+   MODALS & DIALOGS
+   ============================================================ */
+.dialog,
+.dialogContent,
+.formDialogContent {
+  background: var(--jf-surface) !important;
+  border-radius: var(--jf-radius-lg) !important;
+  box-shadow: var(--jf-shadow-xl) !important;
+  border: 1px solid var(--jf-border) !important;
+}
+
+.dialogHeader {
+  background: var(--jf-surface-elevated) !important;
+  border-bottom: 1px solid var(--jf-border) !important;
+  color: var(--jf-text-primary) !important;
+}
+
+.dialogBackdrop {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* ============================================================
+   TABLES & LISTS
+   ============================================================ */
+.listItem {
+  background: var(--jf-surface) !important;
+  border: 1px solid var(--jf-border) !important;
+  border-radius: var(--jf-radius-sm) !important;
+  margin-bottom: 8px !important;
+  transition: all var(--jf-transition) !important;
+}
+
+.listItem:hover {
+  background: var(--jf-surface-hover) !important;
+  border-color: var(--jf-accent) !important;
+}
+
+.listItemBody {
+  color: var(--jf-text-primary) !important;
+}
+
+.listItemBodyText-secondary {
+  color: var(--jf-text-secondary) !important;
+}
+
+/* ============================================================
+   PROGRESS BARS & SLIDERS
+   ============================================================ */
+.itemProgressBar {
+  background: var(--jf-surface-hover) !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+.itemProgressBarForeground {
+  background: var(--jf-accent-gradient) !important;
+}
+
+.sliderBubble {
+  background: var(--jf-accent) !important;
+  color: white !important;
+}
+
+/* ============================================================
+   MEDIA PLAYER
+   ============================================================ */
+.nowPlayingBar,
+.nowPlayingBarTop {
+  background: var(--jf-surface) !important;
+  border-top: 1px solid var(--jf-border) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.nowPlayingBarText {
+  color: var(--jf-text-primary) !important;
+}
+
+.nowPlayingBarSecondaryText {
+  color: var(--jf-text-secondary) !important;
+}
+
+.osdControls {
+  background: linear-gradient(to top, rgba(15, 17, 26, 0.95), transparent) !important;
+}
+
+/* ============================================================
+   LOGIN PAGE
+   ============================================================ */
+#loginPage {
+  background: url('https://cdn.jsdelivr.net/gh/RTFact/jellyfin-overseerr-theme@main/assets/bg.svg') center/cover !important;
+  background-attachment: fixed !important;
+}
+
+#loginPage::before {
+  content: '' !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(15, 17, 26, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  z-index: -1 !important;
+}
+
+.readOnlyContent,
+.loginForm {
+  background: var(--jf-surface) !important;
+  border-radius: var(--jf-radius-lg) !important;
+  box-shadow: var(--jf-shadow-xl) !important;
+  border: 1px solid var(--jf-border) !important;
+  padding: 2rem !important;
+}
+
+/* ============================================================
+   DASHBOARD & SETTINGS
+   ============================================================ */
+.paperList {
+  background: var(--jf-surface) !important;
+  border-radius: var(--jf-radius) !important;
+  border: 1px solid var(--jf-border) !important;
+}
+
+.listItem-border {
+  border-color: var(--jf-divider) !important;
+}
+
+.dashboardSection {
+  background: var(--jf-surface) !important;
+  border-radius: var(--jf-radius) !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  border: 1px solid var(--jf-border) !important;
+}
+
+/* ============================================================
+   SCROLLBARS
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--jf-bg) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--jf-surface-hover) !important;
+  border-radius: 6px !important;
+  border: 2px solid var(--jf-bg) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--jf-accent) !important;
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--jf-surface-hover) var(--jf-bg) !important;
+}
+
+/* ============================================================
+   BADGES & CHIPS
+   ============================================================ */
+.chip,
+.itemTag {
+  background: var(--jf-surface-hover) !important;
+  color: var(--jf-text-primary) !important;
+  border-radius: var(--jf-radius-sm) !important;
+  padding: 4px 12px !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+}
+
+.playedIndicator {
+  background: var(--jf-accent) !important;
+  border-radius: 50% !important;
+}
+
+/* ============================================================
+   TOOLTIPS
+   ============================================================ */
+.tooltip {
+  background: var(--jf-surface-elevated) !important;
+  color: var(--jf-text-primary) !important;
+  border-radius: var(--jf-radius-sm) !important;
+  box-shadow: var(--jf-shadow-lg) !important;
+  border: 1px solid var(--jf-border) !important;
+}
+
+/* ============================================================
+   CONTEXT MENUS
+   ============================================================ */
+.contextMenu {
+  background: var(--jf-surface-elevated) !important;
+  border-radius: var(--jf-radius) !important;
+  box-shadow: var(--jf-shadow-xl) !important;
+  border: 1px solid var(--jf-border) !important;
+  padding: 8px !important;
+}
+
+.contextMenu-item {
+  color: var(--jf-text-primary) !important;
+  border-radius: var(--jf-radius-sm) !important;
+  transition: all var(--jf-transition) !important;
+}
+
+.contextMenu-item:hover {
+  background: var(--jf-surface-hover) !important;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --jf-radius: 10px;
+    --jf-radius-lg: 14px;
+  }
+  
+  .cardContent:hover,
+  .cardImageContainer:hover {
+    transform: scale(1.02) !important;
+  }
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.cardBox,
+.listItem {
+  animation: fadeIn 0.3s ease-out !important;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+.accent-text {
+  color: var(--jf-accent) !important;
+}
+
+.gradient-bg {
+  background: var(--jf-accent-gradient) !important;
+}
+
+.surface-bg {
+  background: var(--jf-surface) !important;
+}
+
+.elevated-bg {
+  background: var(--jf-surface-elevated) !important;
+}
+
+/* ============================================================
+   FINAL OVERRIDES
+   ============================================================ */
+/* Ensure all text is readable */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--jf-text-primary) !important;
+}
+
+p, span, div {
+  color: inherit !important;
+}
+
+/* Remove default Jellyfin branding colors */
+.accent,
+.accentText {
+  color: var(--jf-accent) !important;
+}
+
+/* Smooth all transitions */
+* {
+  transition-duration: var(--jf-transition) !important;
+}
+
+/* ============================================================
+   END OF THEME
+   ============================================================ */

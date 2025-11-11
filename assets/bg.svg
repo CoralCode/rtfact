@@ -1,0 +1,66 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <!-- Main Gradient -->
+    <radialGradient id="bgGradient1" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#5b5ee1;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#0f111a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f111a;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="bgGradient2" cx="70%" cy="70%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#0f111a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f111a;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Noise Filter for Texture -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend mode="multiply" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  
+  <!-- Base Dark Background -->
+  <rect width="1920" height="1080" fill="#0f111a"/>
+  
+  <!-- Gradient Layer 1 -->
+  <rect width="1920" height="1080" fill="url(#bgGradient1)" opacity="0.8"/>
+  
+  <!-- Gradient Layer 2 -->
+  <rect width="1920" height="1080" fill="url(#bgGradient2)" opacity="0.8"/>
+  
+  <!-- Subtle Noise Texture -->
+  <rect width="1920" height="1080" fill="#0f111a" filter="url(#noise)" opacity="0.05"/>
+  
+  <!-- Accent Glow Spots -->
+  <ellipse cx="400" cy="300" rx="300" ry="200" fill="#5b5ee1" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.15;0.1" dur="8s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="1500" cy="800" rx="350" ry="250" fill="#8b5cf6" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.15;0.1" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="960" cy="540" rx="400" ry="300" fill="#6366f1" opacity="0.05">
+    <animate attributeName="opacity" values="0.05;0.1;0.05" dur="12s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Subtle Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#5b5ee1" stroke-width="0.5" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Vignette Effect -->
+  <defs>
+    <radialGradient id="vignette">
+      <stop offset="50%" style="stop-color:#0f111a;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#0f111a;stop-opacity:0.8" />
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+</svg>
