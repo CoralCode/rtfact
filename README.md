@@ -28,7 +28,7 @@ A modern, elegant CSS theme for Jellyfin inspired by Overseerr's sleek interface
 5. Paste the following line:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css");
+@import url("https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css");
 ```
 
 6. Click **Save** at the bottom of the page
@@ -41,7 +41,7 @@ A modern, elegant CSS theme for Jellyfin inspired by Overseerr's sleek interface
 
 If the `@import` method doesn't work:
 
-1. Go to the [raw CSS file](https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css)
+1. Go to the [raw CSS file](https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css)
 2. Copy all the CSS code (Ctrl+A, Ctrl+C)
 3. Paste directly into Jellyfin's **Custom CSS** field
 4. Click **Save** and force refresh

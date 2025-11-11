@@ -11,7 +11,7 @@ Complete installation instructions for RTFact Jellyfin Theme.
 3. Paste in **Custom CSS** field:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css");
+@import url("https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css");
 ```
 
 4. Click **Save**
@@ -45,7 +45,7 @@ Complete installation instructions for RTFact Jellyfin Theme.
 Copy and paste this line:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css");
+@import url("https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css");
 ```
 
 ### Step 4: Save and Refresh
@@ -64,7 +64,7 @@ Copy and paste this line:
 
 If `@import` doesn't work:
 
-1. Visit: https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css
+1. Visit: https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css
 2. Copy all CSS code (`Ctrl + A`, `Ctrl + C`)
 3. Paste directly into Custom CSS field
 4. Save and refresh
@@ -132,4 +132,4 @@ To force update:
 - [README](../README.md) - Overview and features
 - [Customization Guide](CUSTOMIZATION.md) - Modify colors and styles
 - [Jellyfin 10.11 Notes](JELLYFIN_10.11.md) - Version-specific info
-- [GitHub Issues](https://github.com/RTFact/rtfact/issues) - Report problems
+- [GitHub Issues](https://github.com/CoralCode/rtfact/issues) - Report problems

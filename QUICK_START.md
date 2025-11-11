@@ -8,7 +8,7 @@ Get your theme running in 5 minutes!
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/RTFact/rtfact.git
+git remote add origin https://github.com/CoralCode/rtfact.git
 git branch -M main
 git push -u origin main
 ```
@@ -19,7 +19,7 @@ git push -u origin main
 2. Paste this line:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css");
+@import url("https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css");
 ```
 
 3. **Save** and force refresh (Ctrl+F5)
@@ -27,8 +27,8 @@ git push -u origin main
 ## ✅ URLs Already Configured
 
 All URLs are pre-configured to use jsDelivr CDN:
-- Logo: `cdn.jsdelivr.net/gh/RTFact/rtfact@main/assets/logo.svg`
-- Background: `cdn.jsdelivr.net/gh/RTFact/rtfact@main/assets/bg.svg`
+- Logo: `cdn.jsdelivr.net/gh/CoralCode/rtfact@main/assets/logo.svg`
+- Background: `cdn.jsdelivr.net/gh/CoralCode/rtfact@main/assets/bg.svg`
 
 No manual URL updates needed!
 

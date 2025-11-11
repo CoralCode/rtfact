@@ -13,7 +13,7 @@ All colors use CSS variables for easy customization.
 Change the purple-blue accent to any color:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css");
+@import url("https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css");
 
 :root {
   --jf-accent: #10b981; /* Green */

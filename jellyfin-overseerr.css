@@ -3,10 +3,10 @@
    Version: 1.0
    Author: RTFact
    Description: Modern elegant theme inspired by Overseerr and ElegantFin
-   Repository: https://github.com/RTFact/rtfact
+   Repository: https://github.com/CoralCode/rtfact
    
    Installation:
-   @import url("https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css");
+   @import url("https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css");
    
    Jellyfin 10.11.x: Dashboard → Branding → Custom CSS
    Jellyfin 10.10.x and earlier: Dashboard → General → Custom CSS
@@ -141,7 +141,7 @@ body {
 
 /* Header Logo */
 .headerLogo {
-  content: url('https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/assets/logo.svg') !important;
+  content: url('https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/assets/logo.svg') !important;
   height: 42px !important;
   width: auto !important;
   transition: transform var(--jf-transition) !important;
@@ -419,7 +419,7 @@ textarea::placeholder {
    LOGIN PAGE
    ============================================================ */
 #loginPage {
-  background: url('https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/assets/bg.svg') center/cover !important;
+  background: url('https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/assets/bg.svg') center/cover !important;
   background-attachment: fixed !important;
 }
 

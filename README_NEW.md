@@ -29,7 +29,7 @@ A modern, elegant CSS theme for Jellyfin inspired by Overseerr's sleek interface
 3. Paste in **Custom CSS**:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css");
+@import url("https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css");
 ```
 
 4. **Save** and force refresh (`Ctrl + F5`)
@@ -45,7 +45,7 @@ A modern, elegant CSS theme for Jellyfin inspired by Overseerr's sleek interface
 Change colors easily with CSS variables:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/RTFact/rtfact@main/jellyfin-overseerr.css");
+@import url("https://cdn.jsdelivr.net/gh/CoralCode/rtfact@main/jellyfin-overseerr.css");
 
 :root {
   --jf-accent: #10b981; /* Change accent color */
@@ -115,7 +115,7 @@ Change colors easily with CSS variables:
 
 ### Need more help?
 - 📖 [Installation Guide](docs/INSTALLATION.md)
-- 🐛 [Report an Issue](https://github.com/RTFact/rtfact/issues)
+- 🐛 [Report an Issue](https://github.com/CoralCode/rtfact/issues)
 - 💬 [Jellyfin Community](https://jellyfin.org/contact/)
 
 ---
