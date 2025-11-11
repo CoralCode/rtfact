@@ -84,6 +84,12 @@ h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, select,
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* Explicitly preserve icon fonts - DO NOT override these */
+i, .material-icons, .md-icon, [class*="material-icons"], 
+[class*="MuiSvgIcon"], [class*="iconify"], .fa, [class^="fa-"] {
+  font-family: inherit !important;
+}
+
 /* ============================================================
    MAIN LAYOUT
    ============================================================ */
